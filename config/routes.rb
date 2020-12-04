@@ -7,4 +7,7 @@ Rails.application.routes.draw do
     resources :post_comments, only: [:create, :destroy]
   end
   get "home/about" => "homes#about"
+
+  # フォロー機能の
+  resources :relationships, only: [:create, :destroy]
 end
